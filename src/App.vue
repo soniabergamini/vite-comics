@@ -13,13 +13,13 @@ export default {
 </script>
 
 <template>
-  <header>
+  <header class="bg-white my-0 mx-auto border flex justify-center">
     <AppHeader />
   </header>
-  <main>
+  <main class="bg-secondaryBlack text-white my-0 mx-auto border flex justify-center">
     <AppMain />
   </main>
-  <footer>
+  <footer class="bg-tertiaryGrey text-white my-0 mx-auto border flex justify-center">
     <AppFooter />
   </footer>
 </template>

@@ -3,15 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DC Comics</title>
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="./src/assets/img/favicon.ico" />
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Vite + Vue</title>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primaryBlu: '#0182F9',
+              secondaryBlack: '#1C1C1C',
+              tertiaryGrey: '#303030',
+            }
+          }
+        }
+      }
+  </script>
   </head>
-  <body>
+  <body class="max-w-screen-2xl box-border">
     <div id="app"></div>
     <script type="module" src="/src/main.js"></script>
   </body>

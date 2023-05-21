@@ -3,17 +3,18 @@
 export default {
     name: "AppMain",
     components: {
-        
+
     }
 }
 
 </script>
 
 <template>
-    <p>MAIN</p>
+    <section class="max-w-5xl border w-full border">
+        MAIN
+    </section>
 </template>
 
 <style lang="scss" scoped>
-@use '../style.css' as *;
-
+@use '../style.scss' as *;
 </style>

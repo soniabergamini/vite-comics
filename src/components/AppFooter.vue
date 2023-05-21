@@ -7,9 +7,11 @@ export default {
 </script>
 
 <template>
-    <p>FOOTER</p>
+    <section class="max-w-5xl border w-full border">
+        FOOTER
+    </section>
 </template>
 
 <style lang="scss" scoped>
-@use '../style.css' as *;
+@use '../style.scss' as *;
 </style>
