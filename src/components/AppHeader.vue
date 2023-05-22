@@ -3,7 +3,7 @@
 export default {
     name: "AppHeader",
     props: {
-        navItems: String
+        navItems: Array
     }
 }
 

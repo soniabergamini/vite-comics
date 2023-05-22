@@ -3,7 +3,7 @@
 export default {
     name: "AppFooter",
     props: {
-        mainItems: String
+        mainItems: Array
     },
     data() {
         return {
@@ -50,13 +50,13 @@ export default {
 
                 <!-- 1° column of links: DC Comics & Shop -->
                 <div>
-                    <h3 class="text-sm font-bold mb-3.5">DC COMICS</h3>
+                    <h3 class="text-sm font-bold mb-3">DC COMICS</h3>
                     <ul>
                         <li v-for="item in mainItems">
                             <a href="#">{{ item }}</a>
                         </li>
                     </ul>
-                    <h3 class="text-sm font-bold mt-5 mb-3.5">SHOP</h3>
+                    <h3 class="text-sm font-bold mt-5 mb-3">SHOP</h3>
                     <ul>
                         <li>
                             <a href="#">Shop DC</a>
@@ -69,7 +69,7 @@ export default {
 
                 <!-- 2° column of links: DC -->
                 <div>
-                    <h3 class="text-sm font-bold mb-3.5">DC</h3>
+                    <h3 class="text-sm font-bold mb-3">DC</h3>
                     <ul>
                         <li v-for="item in DCitems">
                             <a href="#">{{ item }}</a>
@@ -79,7 +79,7 @@ export default {
 
                 <!-- 3° column of links: Sites -->
                 <div>
-                    <h3 class="text-sm font-bold mb-3.5">SITES</h3>
+                    <h3 class="text-sm font-bold mb-3">SITES</h3>
                     <ul>
                         <li v-for="item in sitesItems">
                             <a href="#">{{ item }}</a>
