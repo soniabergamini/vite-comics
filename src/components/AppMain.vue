@@ -1,4 +1,5 @@
 <script>
+
 import AppMainBanner from './AppMainBanner.vue'
 import AppSlides from './AppSlides.vue'
 

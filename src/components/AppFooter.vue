@@ -43,10 +43,10 @@ export default {
 <template>
     <!-- Footer Section: Links and Brand Logo -->
     <div id="footerLinks" class="w-full my-0 mx-auto flex items-center flex-col bg-cover">
-        <section class="max-w-5xl w-full flex justify-between">
+        <section class="max-w-5xl w-full flex justify-center md:justify-between">
 
             <!-- All Links -->
-            <div class="w-2/5 flex gap-[2rem] px-[0.5em] py-7">
+            <div class="w-4/5 md:w-3/5 flex justify-center md:justify-start gap-[2rem] px-[0.5em] py-7">
 
                 <!-- 1° column of links: DC Comics & Shop -->
                 <div>
@@ -90,7 +90,7 @@ export default {
             </div>
 
             <!-- DC Brand Logo -->
-            <div class="w-2/5 bg-cover bg-center"></div>
+            <div class="md:w-2/5 bg-cover bg-center hidden md:block"></div>
 
         </section>
 
@@ -101,15 +101,16 @@ export default {
         <section class="max-w-5xl w-full h-24 items-center flex p-[0.5em] justify-between">
 
             <!-- SIGN-UP Button -->
-            <button class="border-2 border-primaryBlu text-sm font-bold p-3 hover:bg-primaryBlu">SIGN-UP NOW!</button>
+            <button class="border-2 border-primaryBlu text-[0.6rem] md:text-sm font-bold p-3 hover:bg-primaryBlu">SIGN-UP
+                NOW</button>
 
             <!-- Social Links -->
             <div class="flex gap-2.5 items-center">
-                <h3 class="font-bold text-primaryBlu">FOLLOW US</h3>
-                <ul class="flex justify-evenly gap-2.5">
+                <h3 class="font-bold text-primaryBlu text-xs md:text-base">FOLLOW US</h3>
+                <ul class="flex justify-evenly md:gap-2.5">
                     <li v-for="item in socialLinks">
                         <a href="#">
-                            <img :src="item.path" :alt="item.alt">
+                            <img :src="item.path" :alt="item.alt" class="w-3/4 md:w-full">
                         </a>
                     </li>
                 </ul>
@@ -125,18 +126,15 @@ export default {
 #footerLinks {
     background-image: url(../assets/img/footer-bg.jpg);
 
-    section>div:first-child {
+    section>div:first-child li {
+        margin-top: -.4em;
 
-        li {
-            margin-top: -.4em;
+        a {
+            color: grey;
+            font-size: 10px;
 
-            a {
-                color: grey;
-                font-size: 10px;
-
-                &:hover {
-                    color: $primary-blu;
-                }
+            &:hover {
+                color: $primary-blu;
             }
         }
     }

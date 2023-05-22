@@ -18,11 +18,11 @@ export default {
 </script>
 
 <template>
-    <ul class="flex justify-evenly items-center w-full text-xs">
+    <ul class="flex justify-evenly items-center w-full">
         <li v-for="item in DCassets" class="flex justify-center h-20">
-            <a href="#">
+            <a href="#" class="lg:flex-row">
                 <img :src="item.path" :alt="item.alt">
-                <span class="min-w-fit">{{ item.text.toUpperCase() }}</span>
+                <span class="min-w-fit text-[0.625rem] md:text-xs">{{ item.text.toUpperCase() }}</span>
             </a>
         </li>
     </ul>
@@ -41,6 +41,8 @@ li {
     a {
         align-items: center;
         display: flex;
+        flex-direction: column;
+        text-align: center;
         gap: 1em;
         justify-content: center;
 

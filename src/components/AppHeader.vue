@@ -23,7 +23,7 @@ export default {
 
             <!-- Nav Menu Links -->
             <div class="h-full">
-                <ul class="flex gap-[1em] text-xs h-full items-center">
+                <ul class="flex gap-[1em] text-[0.5rem] md:text-xs h-full items-center">
                     <li v-for="item in navItems">
                         <a href="#">{{ item.toUpperCase() }}</a>
                     </li>

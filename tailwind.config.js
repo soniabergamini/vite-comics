@@ -10,7 +10,7 @@ export default {
               primaryBlu: '#0182F9',
               secondaryBlack: '#1C1C1C',
               tertiaryGrey: '#303030',
-            }
+      }     
     },
   },
   plugins: [],
