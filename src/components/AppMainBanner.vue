@@ -1,41 +1,28 @@
 <script>
 
 export default {
-    name: "AppMainBanner"
+    name: "AppMainBanner",
+    data() {
+        return {
+            DCassets: [
+                { path: '/buy-comics-digital-comics.png', alt: 'buy-digital-img', text: 'Digital Comics' },
+                { path: '/buy-comics-merchandise.png', alt: 'buy-merch-img', text: 'DC Merchandise' },
+                { path: '/buy-comics-subscriptions.png', alt: 'buy-sub-img', text: 'Subscription' },
+                { path: '/buy-comics-shop-locator.png', alt: 'shop-locator-img', text: 'Comic Shop Locator' },
+                { path: '/buy-dc-power-visa.svg', alt: 'power-visa-img', text: 'DC Power Visa' }
+            ]
+        }
+    }
 }
 
 </script>
 
 <template>
     <ul>
-        <li>
+        <li v-for="item in DCassets">
             <a href="#">
-                <img src="../assets/img/buy-comics-digital-comics.png" alt="buy-digital-img">
-                <span>DIGITAL COMICS</span>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <img src="../assets/img/buy-comics-merchandise.png" alt="buy-merch-img">
-                <span>DC MERCHANDISE</span>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <img src="../assets/img/buy-comics-subscriptions.png" alt="buy-sub-img">
-                <span>SUBSCRIPTION</span>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <img src="../assets/img/buy-comics-shop-locator.png" alt="shop-locator-img">
-                <span>COMIC SHOP LOCATOR</span>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <img src="../assets/img/buy-dc-power-visa.svg" alt="power-visa-img">
-                <span>DC POWER VISA</span>
+                <img :src="item.path" :alt="item.alt">
+                <span>{{ item.text }}</span>
             </a>
         </li>
     </ul>
