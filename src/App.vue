@@ -12,7 +12,19 @@ export default {
   },
   data() {
     return {
-      MenuItems: json
+      slidesItems: json,
+      navItems: [
+        'Characters',
+        'Comics',
+        'Movies',
+        'TV',
+        'Games',
+        'Collectibles',
+        'Videos',
+        'Fans',
+        'News',
+        'Shop'
+      ]
     }
   }
 }
@@ -20,13 +32,13 @@ export default {
 
 <template>
   <header>
-    <AppHeader />
+    <AppHeader :navItems="navItems" />
   </header>
   <main class="text-white">
-    <AppMain :slides="MenuItems" />
+    <AppMain :slides="slidesItems" />
   </main>
   <footer class="text-white">
-    <AppFooter />
+    <AppFooter :mainItems="navItems" />
   </footer>
 </template>
 

@@ -2,17 +2,11 @@
 
 export default {
     name: "AppFooter",
+    props: {
+        mainItems: String
+    },
     data() {
         return {
-            mainItems: [
-                'Characters',
-                'Comics',
-                'Movies',
-                'TV',
-                'Games',
-                'Videos',
-                'News'
-            ],
             DCitems: [
                 'Terms Of Use',
                 'Privacy Policy (New)',
@@ -107,7 +101,7 @@ export default {
         <section class="max-w-5xl w-full h-24 items-center flex p-[0.5em] justify-between">
 
             <!-- SIGN-UP Button -->
-            <button class="border-2 border-primaryBlu text-sm font-bold p-3">SIGN-UP NOW!</button>
+            <button class="border-2 border-primaryBlu text-sm font-bold p-3 hover:bg-primaryBlu">SIGN-UP NOW!</button>
 
             <!-- Social Links -->
             <div class="flex gap-2.5 items-center">
@@ -126,7 +120,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@use '../style.scss' as *;
+@use '../variables.scss' as *;
 
 #footerLinks {
     background-image: url(../assets/img/footer-bg.jpg);

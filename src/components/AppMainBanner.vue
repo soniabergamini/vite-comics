@@ -29,7 +29,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@use '../style.scss' as *;
+@use '../variables.scss' as *;
 
 li {
     width: calc(100% / 5 - 1em);

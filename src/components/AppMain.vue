@@ -27,7 +27,8 @@ export default {
             <button class="bg-primaryBlu font-bold py-[0.5em] px-[1em] relative">CURRENT SERIES</button>
             <AppSlides :slides="slides" />
             <div class="w-full text-center">
-                <button class="bg-primaryBlu text-bold text-xs py-[0.5em] px-12 my-4">LOAD MORE</button>
+                <button class="bg-primaryBlu font-bold text-xs py-2 px-12 my-4 hover:text-black hover:bg-white">LOAD
+                    MORE</button>
             </div>
 
         </section>
@@ -42,7 +43,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@use '../style.scss' as *;
+@use '../variables.scss' as *;
 
 #slideSec>button:first-child {
     top: -1.7rem;

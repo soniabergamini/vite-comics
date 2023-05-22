@@ -24,5 +24,4 @@ dist-ssr
 *.sw?
 
 # Files & Folders
-HelloWorld.vue
 documentation

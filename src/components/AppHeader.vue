@@ -2,21 +2,8 @@
 
 export default {
     name: "AppHeader",
-    data() {
-        return {
-            navItems: [
-                'Characters',
-                'Comics',
-                'Movies',
-                'TV',
-                'Games',
-                'Collectibles',
-                'Videos',
-                'Fans',
-                'News',
-                'Shop'
-            ]
-        }
+    props: {
+        navItems: String
     }
 }
 
@@ -53,7 +40,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@use '../style.scss' as *;
+@use '../variables.scss' as *;
 
 li {
     display: flex;
