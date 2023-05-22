@@ -1,7 +1,47 @@
 <script>
 
 export default {
-    name: "AppFooter"
+    name: "AppFooter",
+    data() {
+        return {
+            mainItems: [
+                'Characters',
+                'Comics',
+                'Movies',
+                'TV',
+                'Games',
+                'Videos',
+                'News'
+            ],
+            DCitems: [
+                'Terms Of Use',
+                'Privacy Policy (New)',
+                'Ad Choices',
+                'Advertising',
+                'Jobs',
+                'Subscriptions',
+                'Talent Workshops',
+                'CPSC Certificates',
+                'Ratings',
+                'Shop Help',
+                'Contact Us'
+            ],
+            sitesItems: [
+                'DC',
+                'MAD Magazine',
+                'DC Kids',
+                'DC Universe',
+                'DC Power Visa'
+            ],
+            socialLinks: [
+                { path: '/footer-facebook.png', alt: 'fb-icon' },
+                { path: '/footer-twitter.png', alt: 'tw-icon' },
+                { path: '/footer-youtube.png', alt: 'yt-icon' },
+                { path: '/footer-pinterest.png', alt: 'pt-icon' },
+                { path: '/footer-periscope.png', alt: 'peri-icon' }
+            ]
+        }
+    }
 }
 
 </script>
@@ -14,30 +54,12 @@ export default {
             <!-- All Links -->
             <div class="w-2/5 flex gap-[2rem] px-[0.5em] py-7">
 
-                <!-- 1° column of links -->
+                <!-- 1° column of links: DC Comics & Shop -->
                 <div>
                     <h3 class="text-sm font-bold mb-3.5">DC COMICS</h3>
                     <ul>
-                        <li>
-                            <a href="#">Characters</a>
-                        </li>
-                        <li>
-                            <a href="#">Comics</a>
-                        </li>
-                        <li>
-                            <a href="#">Movies</a>
-                        </li>
-                        <li>
-                            <a href="#">TV</a>
-                        </li>
-                        <li>
-                            <a href="#">Games</a>
-                        </li>
-                        <li>
-                            <a href="#">Videos</a>
-                        </li>
-                        <li>
-                            <a href="#">News</a>
+                        <li v-for="item in mainItems">
+                            <a href="#">{{ item }}</a>
                         </li>
                     </ul>
                     <h3 class="text-sm font-bold mt-5 mb-3.5">SHOP</h3>
@@ -51,64 +73,22 @@ export default {
                     </ul>
                 </div>
 
-                <!-- 2° column of links -->
+                <!-- 2° column of links: DC -->
                 <div>
                     <h3 class="text-sm font-bold mb-3.5">DC</h3>
                     <ul>
-                        <li>
-                            <a href="#">Terms Of Use</a>
-                        </li>
-                        <li>
-                            <a href="#">Privacy Policy (New)</a>
-                        </li>
-                        <li>
-                            <a href="#">Ad Choices</a>
-                        </li>
-                        <li>
-                            <a href="#">Advertising</a>
-                        </li>
-                        <li>
-                            <a href="#">Jobs</a>
-                        </li>
-                        <li>
-                            <a href="#">Subscriptions</a>
-                        </li>
-                        <li>
-                            <a href="#">Talent Workshops</a>
-                        </li>
-                        <li>
-                            <a href="#">CPSC Certificates</a>
-                        </li>
-                        <li>
-                            <a href="#">Ratings</a>
-                        </li>
-                        <li>
-                            <a href="#">Shop Help</a>
-                        </li>
-                        <li>
-                            <a href="#">Contact Us</a>
+                        <li v-for="item in DCitems">
+                            <a href="#">{{ item }}</a>
                         </li>
                     </ul>
                 </div>
 
-                <!-- 3° column of links -->
+                <!-- 3° column of links: Sites -->
                 <div>
                     <h3 class="text-sm font-bold mb-3.5">SITES</h3>
                     <ul>
-                        <li>
-                            <a href="#">DC</a>
-                        </li>
-                        <li>
-                            <a href="#">MAD Magazine</a>
-                        </li>
-                        <li>
-                            <a href="#">DC Kids</a>
-                        </li>
-                        <li>
-                            <a href="#">DC Universe</a>
-                        </li>
-                        <li>
-                            <a href="#">DC Power Visa</a>
+                        <li v-for="item in sitesItems">
+                            <a href="#">{{ item }}</a>
                         </li>
                     </ul>
                 </div>
@@ -133,29 +113,9 @@ export default {
             <div class="flex gap-2.5 items-center">
                 <h3 class="font-bold text-primaryBlu">FOLLOW US</h3>
                 <ul class="flex justify-evenly gap-2.5">
-                    <li>
+                    <li v-for="item in socialLinks">
                         <a href="#">
-                            <img src="../assets/img/footer-facebook.png" alt="fb-icon">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="../assets/img/footer-twitter.png" alt="fb-icon">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="../assets/img/footer-youtube.png" alt="fb-icon">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="../assets/img/footer-pinterest.png" alt="fb-icon">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="../assets/img/footer-periscope.png" alt="fb-icon">
+                            <img :src="item.path" :alt="item.alt">
                         </a>
                     </li>
                 </ul>

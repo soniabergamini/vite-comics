@@ -1,7 +1,23 @@
 <script>
 
 export default {
-    name: "AppHeader"
+    name: "AppHeader",
+    data() {
+        return {
+            navItems: [
+                'Characters',
+                'Comics',
+                'Movies',
+                'TV',
+                'Games',
+                'Collectibles',
+                'Videos',
+                'Fans',
+                'News',
+                'Shop'
+            ]
+        }
+    }
 }
 
 </script>
@@ -20,35 +36,8 @@ export default {
         <!-- Nav Menu Links -->
         <div class="h-full">
             <ul class="flex gap-[1em] text-xs h-full items-center">
-                <li>
-                    <a href="#">CHARACTERS</a>
-                </li>
-                <li>
-                    <a href="#">COMICS</a>
-                </li>
-                <li>
-                    <a href="#">MOVIES</a>
-                </li>
-                <li>
-                    <a href="#">TV</a>
-                </li>
-                <li>
-                    <a href="#">GAMES</a>
-                </li>
-                <li>
-                    <a href="#">COLLECTIBLES</a>
-                </li>
-                <li>
-                    <a href="#">VIDEOS</a>
-                </li>
-                <li>
-                    <a href="#">FANS</a>
-                </li>
-                <li>
-                    <a href="#">NEWS</a>
-                </li>
-                <li>
-                    <a href="#">SHOP</a>
+                <li v-for="item in navItems">
+                    <a href="#">{{ item.toUpperCase() }}</a>
                 </li>
             </ul>
         </div>
