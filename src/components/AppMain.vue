@@ -1,10 +1,18 @@
 <script>
 import AppMainBanner from './AppMainBanner.vue'
+import AppSlides from './AppSlides.vue'
 
 export default {
     name: "AppMain",
     components: {
-        AppMainBanner
+        AppMainBanner,
+        AppSlides
+    },
+    props: {
+        slides: {
+            thumb: String,
+            series: String
+        }
     }
 }
 
@@ -13,8 +21,15 @@ export default {
 <template>
     <!-- Main Contents -->
     <div class="bg-secondaryBlack w-full my-0 mx-auto flex items-center flex-col">
-        <section class="max-w-5xl w-full h-32 flex items-center p-[0.5em]">
-            <p class="text-xl"> - - > Content goes here </p>
+        <section id="slideSec" class="max-w-5xl w-full p-[0.5em]">
+
+            <!-- Current Series Section -->
+            <button class="bg-primaryBlu font-bold py-[0.5em] px-[1em] relative">CURRENT SERIES</button>
+            <AppSlides :slides="slides" />
+            <div class="w-full text-center">
+                <button class="bg-primaryBlu text-bold text-xs py-[0.5em] px-12 my-4">LOAD MORE</button>
+            </div>
+
         </section>
     </div>
 
@@ -28,4 +43,8 @@ export default {
 
 <style lang="scss" scoped>
 @use '../style.scss' as *;
+
+#slideSec>button:first-child {
+    top: -1.7rem;
+}
 </style>

@@ -23,7 +23,7 @@ export default {
     <AppHeader />
   </header>
   <main class="text-white">
-    <AppMain />
+    <AppMain :slides="MenuItems" />
   </main>
   <footer class="text-white">
     <AppFooter />
