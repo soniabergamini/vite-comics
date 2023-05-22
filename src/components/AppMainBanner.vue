@@ -18,11 +18,11 @@ export default {
 </script>
 
 <template>
-    <ul>
-        <li v-for="item in DCassets">
+    <ul class="flex justify-evenly items-center w-full text-xs">
+        <li v-for="item in DCassets" class="flex justify-center h-20">
             <a href="#">
                 <img :src="item.path" :alt="item.alt">
-                <span>{{ item.text.toUpperCase() }}</span>
+                <span class="min-w-fit">{{ item.text.toUpperCase() }}</span>
             </a>
         </li>
     </ul>
@@ -31,32 +31,22 @@ export default {
 <style lang="scss" scoped>
 @use '../style.scss' as *;
 
-ul {
-    justify-content: space-evenly;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    font-size: 0.75rem;
+li {
+    width: calc(100% / 5 - 1em);
 
-    li {
-        width: calc(100% / 5 - 1em);
-        justify-content: center;
+    &:hover {
+        box-shadow: 0px 10px 13px -7px #000000, 0px 50px 19px 16px rgba(0, 0, 0, 0);
+    }
+
+    a {
+        align-items: center;
         display: flex;
+        gap: 1em;
+        justify-content: center;
 
-        a {
-            align-items: center;
-            display: flex;
-            gap: 1em;
-            justify-content: center;
-
-            img {
-                max-width: 3rem;
-                max-height: 2.75rem;
-            }
-
-            span {
-                min-width: fit-content;
-            }
+        img {
+            max-width: 3rem;
+            max-height: 2.75rem;
         }
     }
 }
