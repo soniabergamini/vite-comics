@@ -8,7 +8,7 @@ export default {
 
 <template>
     <!-- Header Nav -->
-    <nav class="flex justify-between max-w-5xl border w-full p-[0.5em]">
+    <nav class="flex justify-between max-w-5xl w-full p-[0.5em]">
 
         <!-- DC Brand Logo -->
         <div>
@@ -20,34 +20,34 @@ export default {
         <!-- Nav Menu Links -->
         <div class="h-full">
             <ul class="flex gap-[1em] text-xs h-full items-center">
-                <li class="hover:border-b-4 h-full flex items-center border-primaryBlu hover:text-primaryBlu font-bold">
+                <li>
                     <a href="#">CHARACTERS</a>
                 </li>
-                <li class="hover:border-b-4 h-full flex items-center border-primaryBlu hover:text-primaryBlu font-bold">
+                <li>
                     <a href="#">COMICS</a>
                 </li>
-                <li class="hover:border-b-4 h-full flex items-center border-primaryBlu hover:text-primaryBlu font-bold">
+                <li>
                     <a href="#">MOVIES</a>
                 </li>
-                <li class="hover:border-b-4 h-full flex items-center border-primaryBlu hover:text-primaryBlu font-bold">
+                <li>
                     <a href="#">TV</a>
                 </li>
-                <li class="hover:border-b-4 h-full flex items-center border-primaryBlu hover:text-primaryBlu font-bold">
+                <li>
                     <a href="#">GAMES</a>
                 </li>
-                <li class="hover:border-b-4 h-full flex items-center border-primaryBlu hover:text-primaryBlu font-bold">
+                <li>
                     <a href="#">COLLECTIBLES</a>
                 </li>
-                <li class="hover:border-b-4 h-full flex items-center border-primaryBlu hover:text-primaryBlu font-bold">
+                <li>
                     <a href="#">VIDEOS</a>
                 </li>
-                <li class="hover:border-b-4 h-full flex items-center border-primaryBlu hover:text-primaryBlu font-bold">
+                <li>
                     <a href="#">FANS</a>
                 </li>
-                <li class="hover:border-b-4 h-full flex items-center border-primaryBlu hover:text-primaryBlu font-bold">
+                <li>
                     <a href="#">NEWS</a>
                 </li>
-                <li class="hover:border-b-4 h-full flex items-center border-primaryBlu hover:text-primaryBlu font-bold">
+                <li>
                     <a href="#">SHOP</a>
                 </li>
             </ul>
@@ -58,4 +58,16 @@ export default {
 
 <style lang="scss" scoped>
 @use '../style.scss' as *;
+
+li {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    font-weight: 800;
+
+    &:hover {
+        border-bottom: 4px solid $primary-blu;
+        color: $primary-blu;
+    }
+}
 </style>

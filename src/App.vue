@@ -19,7 +19,7 @@ export default {
   <main class="text-white">
     <AppMain />
   </main>
-  <footer class="bg-tertiaryGrey text-white my-0 mx-auto border flex justify-center">
+  <footer class="text-white">
     <AppFooter />
   </footer>
 </template>
