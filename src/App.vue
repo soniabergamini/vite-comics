@@ -13,10 +13,10 @@ export default {
 </script>
 
 <template>
-  <header class="bg-white my-0 mx-auto border flex justify-center">
+  <header class="bg-white my-0 mx-auto flex justify-center">
     <AppHeader />
   </header>
-  <main class="bg-secondaryBlack text-white my-0 mx-auto border flex justify-center">
+  <main class="text-white">
     <AppMain />
   </main>
   <footer class="bg-tertiaryGrey text-white my-0 mx-auto border flex justify-center">
