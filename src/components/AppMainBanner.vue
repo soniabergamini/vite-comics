@@ -22,7 +22,7 @@ export default {
         <li v-for="item in DCassets">
             <a href="#">
                 <img :src="item.path" :alt="item.alt">
-                <span>{{ item.text }}</span>
+                <span>{{ item.text.toUpperCase() }}</span>
             </a>
         </li>
     </ul>
